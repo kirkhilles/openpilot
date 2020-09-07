@@ -201,7 +201,7 @@ int main(int argc, char **argv) {
 
       if (sm.update(0) > 0){
         // TODO: path planner timeout?
-        desire = ((int)sm["pathPlan"].getPathPlan().getDesire()) - 1;
+        desire = ((int)sm["pathPlan"].getPathPlan().getDesire());
       }
 
       double mt1 = 0, mt2 = 0;

@@ -219,8 +219,8 @@ class LanePlanner():
     #   f.write('{}\n'.format({'l_prob': self.l_prob, 'r_prob': self.r_prob, 'l_poly': self.l_poly, 'r_poly': self.r_poly, 'p_poly': self.p_poly}))
 
     if len(md.meta.desireState):
-      self.l_lane_change_prob = md.meta.desireState[log.PathPlan.Desire.laneChangeLeft - 1]
-      self.r_lane_change_prob = md.meta.desireState[log.PathPlan.Desire.laneChangeRight - 1]
+      self.l_lane_change_prob = md.meta.desireState[log.PathPlan.Desire.laneChangeLeft]
+      self.r_lane_change_prob = md.meta.desireState[log.PathPlan.Desire.laneChangeRight]
 
   def update_d_poly(self, v_ego, angle_steers, active):
     # only offset left and right lane lines; offsetting p_poly does not make sense since it's already offset from the model
