@@ -77,7 +77,6 @@ torch = "*"
 torchsummary = "*"
 
 [packages]
-sklearn = "*"
 atomicwrites = "*"
 cffi = "*"
 crcmod = "*"
