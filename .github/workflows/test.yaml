@@ -127,7 +127,9 @@ jobs:
       - name: Build Docker image
         run: eval "$BUILD"
       - name: pre-commit
-        run: $RUN "cd /tmp/openpilot/ && git init && git add -A && pre-commit run --all"
+        run: |
+          pip install sklearn
+          $RUN "cd /tmp/openpilot/ && git init && git add -A && pre-commit run --all"
 
   valgrind:
     name: valgrind
